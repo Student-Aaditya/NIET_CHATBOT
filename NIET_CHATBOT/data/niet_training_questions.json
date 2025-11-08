@@ -1,0 +1,166 @@
+[
+    {
+        "intent": "admission_query",
+        "question": "What is the admission process for B.Tech at NIET?"
+    },
+    {
+        "intent": "admission_query",
+        "question": "How can I apply for admission in BBA or BCA?"
+    },
+    {
+        "intent": "admission_query",
+        "question": "What is the eligibility for B.Tech admission?"
+    },
+    {
+        "intent": "admission_query",
+        "question": "Can diploma holders apply for lateral entry?"
+    },
+    {
+        "intent": "admission_query",
+        "question": "Is migration from other universities allowed?"
+    },
+    {
+        "intent": "fees_query",
+        "question": "What is the total academic fee for B.Tech?"
+    },
+    {
+        "intent": "fees_query",
+        "question": "What are the bus fees for Noida route?"
+    },
+    {
+        "intent": "fees_query",
+        "question": "What is the hostel fee per annum?"
+    },
+    {
+        "intent": "fees_query",
+        "question": "Are mess charges included in hostel fees?"
+    },
+    {
+        "intent": "fees_query",
+        "question": "What is the M.Tech fee for the first year?"
+    },
+    {
+        "intent": "scholarship_query",
+        "question": "What scholarships are available at NIET?"
+    },
+    {
+        "intent": "scholarship_query",
+        "question": "How can I apply for the Samaj Kalyan Vibhag scholarship?"
+    },
+    {
+        "intent": "infrastructure_query",
+        "question": "Does the campus have Wi-Fi?"
+    },
+    {
+        "intent": "infrastructure_query",
+        "question": "What are the library timings?"
+    },
+    {
+        "intent": "infrastructure_query",
+        "question": "Does NIET have a health centre?"
+    },
+    {
+        "intent": "academics_query",
+        "question": "What is the minimum attendance requirement?"
+    },
+    {
+        "intent": "academics_query",
+        "question": "Is internship compulsory at NIET?"
+    },
+    {
+        "intent": "student_welfare_query",
+        "question": "What is the Mentor-Mentee scheme at NIET?"
+    },
+    {
+        "intent": "student_welfare_query",
+        "question": "Does NIET provide fee waivers for EWS students?"
+    },
+    {
+        "intent": "innovation_query",
+        "question": "What is the Institution Innovation Council (IIC)?"
+    },
+    {
+        "intent": "innovation_query",
+        "question": "Does NIET organize hackathons?"
+    },
+    {
+        "intent": "placement_query",
+        "question": "What are the placement rules?"
+    },
+    {
+        "intent": "placement_query",
+        "question": "What is the 1.5x rule in placements?"
+    },
+    {
+        "intent": "placement_query",
+        "question": "Are internships mandatory for placement?"
+    },
+    {
+        "intent": "club_query",
+        "question": "What are the technical clubs at NIET?"
+    },
+    {
+        "intent": "club_query",
+        "question": "What are the cultural clubs?"
+    },
+    {
+        "intent": "rules_query",
+        "question": "What are the campus discipline rules?"
+    },
+    {
+        "intent": "rules_query",
+        "question": "Is ragging allowed in NIET?"
+    },
+    {
+        "intent": "rules_query",
+        "question": "What are the punishments for ragging?"
+    },
+    {
+        "intent": "fees_query",
+        "question": "Does NIET provide bus services?"
+    },
+    {
+        "intent": "fees_query",
+        "question": "What are the available bus routes?"
+    },
+    {
+        "intent": "code_of_conduct_query",
+        "question": "What is the code of conduct for students?"
+    },
+    {
+        "intent": "code_of_conduct_query",
+        "question": "What happens if a student is caught cheating?"
+    },
+    {
+        "intent": "contact_query",
+        "question": "Who is the Director of NIET?"
+    },
+    {
+        "intent": "contact_query",
+        "question": "Who is the Dean of Student Welfare?"
+    },
+    {
+        "intent": "contact_query",
+        "question": "What is the phone number of the hostel warden?"
+    },
+    {
+        "intent": "achievements_query",
+        "question": "What awards has NIET received?"
+    },
+    {
+        "intent": "achievements_query",
+        "question": "What is NIET\u2019s national ranking?"
+    },
+    {
+        "intent": "general_query",
+        "question": "Tell me about NIET."
+    },
+    {
+        "intent": "general_query",
+        "question": "Is NIET affiliated with AKTU?"
+    },
+    {
+        "intent": "general_query",
+        "question": "Is NIET approved by AICTE?"
+    }
+]

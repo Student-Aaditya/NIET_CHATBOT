@@ -1,0 +1,332 @@
+{
+    "NIET_Student_Handbook": {
+        "admission_information": {
+            "undergraduate": {
+                "courses": [
+                    "B.Tech",
+                    "BBA",
+                    "BCA"
+                ],
+                "rules": [
+                    "Admission through AKTU/UPSEE entrance exam.",
+                    "Lateral Entry allowed for Diploma/B.Sc holders with minimum 60%.",
+                    "Migration from other universities not permitted.",
+                    "Eligibility: 10+2 (PCM) with 45% marks (40% for SC/ST).",
+                    "Diploma must be recognized by U.P. Board of Technical Education."
+                ]
+            },
+            "postgraduate": {
+                "courses": [
+                    "M.Tech",
+                    "MBA",
+                    "MCA",
+                    "Integrated M.Tech"
+                ],
+                "rules": [
+                    "M.Tech: Through GATE/University test.",
+                    "MBA: Graduation with 50% marks (45% for SC/ST).",
+                    "MCA: 3-year graduation with Maths at 10+2 or graduation level, 50% marks.",
+                    "Integrated M.Tech: 10+2 (PCM) with 45% marks or equivalent diploma."
+                ]
+            }
+        },
+        "fee_structure": {
+            "academic_year": "2024-25",
+            "btech": {
+                "components": {
+                    "tuition_fee": 118400,
+                    "external_exam_fee": 7500,
+                    "internal_exam_fee": 4000,
+                    "security_refundable": 5000,
+                    "registration_fee": 4800,
+                    "student_welfare": 5000,
+                    "tbl_fee": 8600,
+                    "department_society_outreach": 7600,
+                    "career_planning_technical_grooming": 7800,
+                    "training_placement_earnest_money": 5000,
+                    "industry_interface": 5400
+                },
+                "total_first_year": 179100,
+                "discounted_total": 170100,
+                "next_year_fee": 155700,
+                "next_year_discounted": 147600
+            },
+            "mtech": {
+                "first_year_total": 135000,
+                "next_year": 116100
+            },
+            "bus_fee": {
+                "ghaziabad_delhi": 38700,
+                "noida": 35100,
+                "bulandshahr": 54000,
+                "sikandrabad": 45000
+            },
+            "hostel_fee": {
+                "range": "90000\u2013110000",
+                "includes": [
+                    "mess",
+                    "electricity",
+                    "maintenance"
+                ]
+            }
+        },
+        "scholarships": {
+            "available_through": [
+                "UP Government Samaj Kalyan Vibhag",
+                "National Scholarship Portal"
+            ],
+            "links": {
+                "state_portal": "http://scholarship.up.gov.in",
+                "national_portal": "https://scholarships.gov.in"
+            },
+            "process": "Eligible candidates apply through online portals. Institute verifies documents before forwarding to authorities."
+        },
+        "infrastructure": {
+            "campus": "13.85 acres, lush green, Wi-Fi enabled.",
+            "library": {
+                "timings": "Weekdays 9AM-7PM, Weekends 9AM-5PM",
+                "book_limit": {
+                    "UG": 2,
+                    "PG": 4,
+                    "Faculty": 5
+                },
+                "fine_per_day": 5
+            },
+            "health_centre": "24x7 with resident doctor, ambulance, and Yatharth Hospital tie-up.",
+            "gymnasium": "Modern facility, Rs. 600/month.",
+            "dining_hall": "Vegetarian meals; breakfast, lunch, snacks, dinner available.",
+            "bank_atm": "Union Bank outlet on campus.",
+            "wifi_labs": "High-speed network and computer labs with access logbook.",
+            "cafeteria": "Open 9:30 AM \u2013 10:30 PM.",
+            "sports": [
+                "Cricket",
+                "Football",
+                "Basketball",
+                "Badminton",
+                "Chess",
+                "Yoga",
+                "Carrom"
+            ]
+        },
+        "academics": {
+            "structure": {
+                "system": "Semester",
+                "semesters_per_year": 2,
+                "working_days": 90,
+                "credit_requirements": {
+                    "B.Tech": 160,
+                    "M.Tech": 72,
+                    "MBA": 96,
+                    "MCA": 144
+                },
+                "attendance_policy": "Minimum 75% attendance; 15% relaxation for co-curricular, 10% for medical reasons.",
+                "internship": "2\u20134 weeks mandatory as per course evaluation."
+            }
+        },
+        "student_welfare": {
+            "schemes": [
+                "Mentor-Mentee Scheme",
+                "Bright Student Development Program (BSDP)",
+                "Weak Student Development Program (WSDP)",
+                "Non-performing Student Development Program (NSDP)",
+                "Tuition Fee Waiver for EWS",
+                "Medical reimbursement for hostellers"
+            ],
+            "grievance_cells": {
+                "women_cell": "Women Grievance Redressal Cell (WGRC)",
+                "student_cell": {
+                    "name": "Student Grievance Redressal Cell (SGRC)",
+                    "email": "sgrc.niet@gmail.com"
+                }
+            }
+        },
+        "innovation_cell": {
+            "description": "Institution Innovation Council (IIC) under MHRD\u2019s Innovation Cell promotes entrepreneurship, innovation, and startup culture.",
+            "activities": [
+                "Hackathons",
+                "Workshops",
+                "IPR awareness sessions",
+                "Idea incubation"
+            ],
+            "collaborations": [
+                "Atal Ranking of Institutions on Innovation Achievement (ARIIA)"
+            ],
+            "objectives": [
+                "Support startups and entrepreneurship",
+                "Mentorship and investor networking",
+                "Develop innovation ecosystem in HEIs"
+            ]
+        },
+        "career_management_cell": {
+            "functions": [
+                "Facilitates student training, internships, and placements.",
+                "Connects students with corporate recruiters and alumni.",
+                "Organizes workshops on soft skills and professional ethics."
+            ],
+            "recruiter_categories": {
+                "type_1": "Must-Attend (core companies)",
+                "type_2": "Optional (general companies)",
+                "type_3": "Dream Recruiters (high package)"
+            },
+            "rules": [
+                "Formal dress and ID mandatory during interviews.",
+                "No-show in registered drives leads to 3-company debarment.",
+                "Eligible for next job only if package is 1.5x previous offer.",
+                "Internship (6-month/1-year) mandatory; summer internship final."
+            ]
+        },
+        "clubs_and_activities": {
+            "technical_clubs": [
+                "GDSC",
+                "GeeksforGeeks",
+                "CodeChef",
+                "CyberInvaders",
+                "ISTE",
+                "IETE",
+                "CloudShastra",
+                "AI (Nexus)",
+                "Metaverse",
+                "IoT (Signodes)",
+                "Reboot",
+                "InnoMinds",
+                "Design Thinkers",
+                "CSI",
+                "Aerobots"
+            ],
+            "cultural_clubs": [
+                "Juventas",
+                "Harmonics",
+                "Kathputliyan",
+                "Nritya Bhakti",
+                "Cypher"
+            ],
+            "social_clubs": [
+                "Khushiyan Baatton",
+                "Green Gold Society",
+                "Hope in Darkness",
+                "Jetsetters",
+                "Alma Mater"
+            ],
+            "hobby_clubs": [
+                "Kalakriti",
+                "Sang Rachna",
+                "Spectrum",
+                "Megapixels",
+                "Conventus"
+            ]
+        },
+        "rules_regulations": {
+            "campus": [
+                "No ragging, drugs, alcohol, smoking, or weapons allowed.",
+                "Anti-ragging affidavit mandatory from students and parents.",
+                "Violations lead to fines (\u20b920k\u2013\u20b950k), suspension, or FIR.",
+                "Students must carry their ID at all times."
+            ],
+            "hostel": [
+                "Girls in-time 7 PM.",
+                "No smoking, alcohol, or cooking appliances.",
+                "Maintain cleanliness; property damage fined.",
+                "Opposite gender visitors limited to common area."
+            ],
+            "library": [
+                "Silence mandatory.",
+                "Fine \u20b95/day for late returns.",
+                "Lost book = double cost.",
+                "Reference books not issued."
+            ],
+            "computer_lab": [
+                "Maintain logbook.",
+                "No gaming, food, or chatting.",
+                "Penalty \u20b9500\u2013\u20b91000 or 1-month ban."
+            ]
+        },
+        "transport_facility": {
+            "routes": [
+                "Ghaziabad",
+                "Noida",
+                "Delhi",
+                "Bulandshahr",
+                "Sikandrabad"
+            ],
+            "rules": [
+                "First-come-first-serve allocation.",
+                "Bus ID card mandatory.",
+                "Misconduct or ragging in bus leads to suspension.",
+                "Fee non-refundable except in withdrawal or hostel shift."
+            ]
+        },
+        "code_of_conduct": {
+            "rules": [
+                "Maintain discipline, punctuality, and honesty.",
+                "Avoid misconduct such as violence, theft, or cheating.",
+                "Academic integrity: plagiarism strictly banned.",
+                "Cyber safety and respectful communication required.",
+                "Disciplinary appeals can be made to Registrar."
+            ]
+        },
+        "achievements": {
+            "details": [
+                "NIET ranked 43rd nationally.",
+                "Tie-ups with Mercedes Benz and Cambridge English.",
+                "Received awards for 'Best Engineering Institute for Placement'.",
+                "Strong alumni presence across top MNCs."
+            ]
+        },
+        "important_contacts": [
+            {
+                "role": "Director",
+                "name": "Dr. Vinod M. Kapse",
+                "phone": "9899446607"
+            },
+            {
+                "role": "Dean (SW)",
+                "name": "Dr. Manish Kaushik",
+                "phone": "9958455050"
+            },
+            {
+                "role": "Chief Proctor",
+                "name": "Prof. Rakesh Kumar Singh",
+                "phone": "9811779273"
+            },
+            {
+                "role": "Registrar",
+                "name": "Dr. K.P. Singh",
+                "phone": "9873007561"
+            },
+            {
+                "role": "Girls Warden",
+                "name": "Mrs. Ranjana Singh",
+                "phone": "9891273816"
+            },
+            {
+                "role": "Physician",
+                "name": "Dr. Ravi Sharma",
+                "phone": "9718772677"
+            },
+            {
+                "role": "Library",
+                "name": "Mr. Vinay Tiwari",
+                "phone": "9210304909"
+            }
+        ],
+        "keywords": [
+            "NIET",
+            "Admission",
+            "Fee Structure",
+            "Hostel Rules",
+            "Scholarship",
+            "Clubs",
+            "Infrastructure",
+            "Placement",
+            "CMC",
+            "Innovation",
+            "IIC",
+            "Student Welfare",
+            "Code of Conduct",
+            "Library",
+            "Transport",
+            "Mentorship",
+            "Grievance Redressal"
+        ]
+    }
+}
