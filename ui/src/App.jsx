@@ -1,5 +1,6 @@
 
 import './App.css'
+import Chat from './Components/Chat'
 import ChatBox from './Components/ChatBox'
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <>
       <h1>NIET CHATBOT </h1>
       <ChatBox/>
+      {/* <Chat/> */}
     </>
   )
 }

@@ -1,166 +1,221 @@
 [
-    {
-        "intent": "admission_query",
-        "question": "What is the admission process for B.Tech at NIET?"
-    },
-    {
-        "intent": "admission_query",
-        "question": "How can I apply for admission in BBA or BCA?"
-    },
-    {
-        "intent": "admission_query",
-        "question": "What is the eligibility for B.Tech admission?"
-    },
-    {
-        "intent": "admission_query",
-        "question": "Can diploma holders apply for lateral entry?"
-    },
-    {
-        "intent": "admission_query",
-        "question": "Is migration from other universities allowed?"
-    },
-    {
-        "intent": "fees_query",
-        "question": "What is the total academic fee for B.Tech?"
-    },
-    {
-        "intent": "fees_query",
-        "question": "What are the bus fees for Noida route?"
-    },
-    {
-        "intent": "fees_query",
-        "question": "What is the hostel fee per annum?"
-    },
-    {
-        "intent": "fees_query",
-        "question": "Are mess charges included in hostel fees?"
-    },
-    {
-        "intent": "fees_query",
-        "question": "What is the M.Tech fee for the first year?"
-    },
-    {
-        "intent": "scholarship_query",
-        "question": "What scholarships are available at NIET?"
-    },
-    {
-        "intent": "scholarship_query",
-        "question": "How can I apply for the Samaj Kalyan Vibhag scholarship?"
-    },
-    {
-        "intent": "infrastructure_query",
-        "question": "Does the campus have Wi-Fi?"
-    },
-    {
-        "intent": "infrastructure_query",
-        "question": "What are the library timings?"
-    },
-    {
-        "intent": "infrastructure_query",
-        "question": "Does NIET have a health centre?"
-    },
-    {
-        "intent": "academics_query",
-        "question": "What is the minimum attendance requirement?"
-    },
-    {
-        "intent": "academics_query",
-        "question": "Is internship compulsory at NIET?"
-    },
-    {
-        "intent": "student_welfare_query",
-        "question": "What is the Mentor-Mentee scheme at NIET?"
-    },
-    {
-        "intent": "student_welfare_query",
-        "question": "Does NIET provide fee waivers for EWS students?"
-    },
-    {
-        "intent": "innovation_query",
-        "question": "What is the Institution Innovation Council (IIC)?"
-    },
-    {
-        "intent": "innovation_query",
-        "question": "Does NIET organize hackathons?"
-    },
-    {
-        "intent": "placement_query",
-        "question": "What are the placement rules?"
-    },
-    {
-        "intent": "placement_query",
-        "question": "What is the 1.5x rule in placements?"
-    },
-    {
-        "intent": "placement_query",
-        "question": "Are internships mandatory for placement?"
-    },
-    {
-        "intent": "club_query",
-        "question": "What are the technical clubs at NIET?"
-    },
-    {
-        "intent": "club_query",
-        "question": "What are the cultural clubs?"
-    },
-    {
-        "intent": "rules_query",
-        "question": "What are the campus discipline rules?"
-    },
-    {
-        "intent": "rules_query",
-        "question": "Is ragging allowed in NIET?"
-    },
-    {
-        "intent": "rules_query",
-        "question": "What are the punishments for ragging?"
-    },
-    {
-        "intent": "fees_query",
-        "question": "Does NIET provide bus services?"
-    },
-    {
-        "intent": "fees_query",
-        "question": "What are the available bus routes?"
-    },
-    {
-        "intent": "code_of_conduct_query",
-        "question": "What is the code of conduct for students?"
-    },
-    {
-        "intent": "code_of_conduct_query",
-        "question": "What happens if a student is caught cheating?"
-    },
-    {
-        "intent": "contact_query",
-        "question": "Who is the Director of NIET?"
-    },
-    {
-        "intent": "contact_query",
-        "question": "Who is the Dean of Student Welfare?"
-    },
-    {
-        "intent": "contact_query",
-        "question": "What is the phone number of the hostel warden?"
-    },
-    {
-        "intent": "achievements_query",
-        "question": "What awards has NIET received?"
-    },
-    {
-        "intent": "achievements_query",
-        "question": "What is NIET\u2019s national ranking?"
-    },
-    {
-        "intent": "general_query",
-        "question": "Tell me about NIET."
-    },
-    {
-        "intent": "general_query",
-        "question": "Is NIET affiliated with AKTU?"
-    },
-    {
-        "intent": "general_query",
-        "question": "Is NIET approved by AICTE?"
-    }
+  {
+    "intent": "scholarship_query",
+    "question": "What scholarships can NIET students apply for?"
+  },
+  {
+    "intent": "scholarship_query",
+    "question": "Does NIET provide any merit-based scholarships?"
+  },
+  {
+    "intent": "scholarship_query",
+    "question": "How can I apply for the UP Samaj Kalyan Vibhag scholarship?"
+  },
+  {
+    "intent": "scholarship_query",
+    "question": "Does NIET verify and forward the scholarship applications to authorities?"
+  },
+  {
+    "intent": "scholarship_query",
+    "question": "Where can I find the official scholarship links for NIET students?"
+  },
+  {
+    "intent": "scholarship_query",
+    "question": "Can NIET students apply for the National Scholarship Portal (NSP)?"
+  },
+  {
+    "intent": "scholarship_query",
+    "question": "When is the last date to apply for scholarships at NIET?"
+  },
+
+  {
+    "intent": "club_query",
+    "question": "Which technical clubs are available at NIET?"
+  },
+  {
+    "intent": "club_query",
+    "question": "Which cultural clubs are active at NIET?"
+  },
+  {
+    "intent": "club_query",
+    "question": "Does NIET have any social service or community clubs?"
+  },
+  {
+    "intent": "club_query",
+    "question": "Which hobby clubs can I join at NIET?"
+  },
+  {
+    "intent": "club_query",
+    "question": "How can I become a member of the GDSC or CodeChef club at NIET?"
+  },
+  {
+    "intent": "club_query",
+    "question": "Who manages the cultural club Juventas at NIET?"
+  },
+  {
+    "intent": "club_query",
+    "question": "Are there any photography or design clubs at NIET?"
+  },
+
+  {
+    "intent": "infrastructure_query",
+    "question": "Is NIET campus Wi-Fi enabled for students and faculty?"
+  },
+  {
+    "intent": "infrastructure_query",
+    "question": "What are the library timings and how many books can I issue?"
+  },
+  {
+    "intent": "infrastructure_query",
+    "question": "Is there a gym or fitness center at NIET?"
+  },
+  {
+    "intent": "infrastructure_query",
+    "question": "Does NIET have a 24x7 health centre?"
+  },
+  {
+    "intent": "infrastructure_query",
+    "question": "Is there a Union Bank ATM on the NIET campus?"
+  },
+  {
+    "intent": "infrastructure_query",
+    "question": "Does the cafeteria at NIET stay open in the evening?"
+  },
+  {
+    "intent": "infrastructure_query",
+    "question": "Are there computer labs with high-speed internet at NIET?"
+  },
+  {
+    "intent": "infrastructure_query",
+    "question": "What facilities are available for research and innovation at NIET?"
+  },
+  {
+    "intent": "infrastructure_query",
+    "question": "How big is the NIET campus and what are its major facilities?"
+  },
+
+  {
+    "intent": "dining_query",
+    "question": "What kind of food is served in the NIET dining hall?"
+  },
+  {
+    "intent": "dining_query",
+    "question": "Is the dining hall vegetarian or non-vegetarian at NIET?"
+  },
+  {
+    "intent": "dining_query",
+    "question": "What are the dining hall meal timings at NIET?"
+  },
+  {
+    "intent": "dining_query",
+    "question": "Are hostel students provided all meals in the dining hall?"
+  },
+  {
+    "intent": "dining_query",
+    "question": "Is there any extra charge for dining services apart from hostel fees?"
+  },
+
+  {
+    "intent": "sports_query",
+    "question": "Which sports facilities are available at NIET?"
+  },
+  {
+    "intent": "sports_query",
+    "question": "Does NIET organize inter-college sports tournaments?"
+  },
+  {
+    "intent": "sports_query",
+    "question": "Is there a gym or yoga center in the NIET campus?"
+  },
+  {
+    "intent": "sports_query",
+    "question": "Can students use the sports ground after college hours?"
+  },
+  {
+    "intent": "sports_query",
+    "question": "Is there any fee for using the gymnasium at NIET?"
+  },
+
+  {
+    "intent": "academics_query",
+    "question": "How many semesters are there in one academic year at NIET?"
+  },
+  {
+    "intent": "academics_query",
+    "question": "How many working days are there in one semester?"
+  },
+  {
+    "intent": "academics_query",
+    "question": "What is the credit requirement for completing B.Tech or MBA at NIET?"
+  },
+  {
+    "intent": "academics_query",
+    "question": "What type of academic system does NIET follow — annual or semester?"
+  },
+  {
+    "intent": "academics_query",
+    "question": "What is the minimum attendance percentage required for exams?"
+  },
+  {
+    "intent": "academics_query",
+    "question": "Does NIET provide relaxation in attendance for medical or co-curricular reasons?"
+  },
+  {
+    "intent": "academics_query",
+    "question": "Is internship mandatory in the NIET academic structure?"
+  },
+  {
+    "intent": "academics_query",
+    "question": "What is the evaluation system for internal and external exams at NIET?"
+  },
+
+  {
+    "intent": "student_welfare_query",
+    "question": "What is the Mentor-Mentee scheme and how does it support students?"
+  },
+  {
+    "intent": "student_welfare_query",
+    "question": "What is the Bright Student Development Program (BSDP)?"
+  },
+  {
+    "intent": "student_welfare_query",
+    "question": "What is the Weak Student Development Program (WSDP) at NIET?"
+  },
+  {
+    "intent": "student_welfare_query",
+    "question": "What is the Non-performing Student Development Program (NSDP)?"
+  },
+  {
+    "intent": "student_welfare_query",
+    "question": "Does NIET provide medical reimbursement for hostellers?"
+  },
+  {
+    "intent": "student_welfare_query",
+    "question": "What kind of welfare programs are conducted for overall student development?"
+  },
+
+  {
+    "intent": "grievance_query",
+    "question": "What is the Student Grievance Redressal Cell (SGRC) at NIET?"
+  },
+  {
+    "intent": "grievance_query",
+    "question": "What is the email ID for submitting grievances to NIET?"
+  },
+  {
+    "intent": "grievance_query",
+    "question": "Does NIET have a Women Grievance Redressal Cell?"
+  },
+  {
+    "intent": "grievance_query",
+    "question": "How can students report issues related to harassment or unfair treatment at NIET?"
+  },
+  {
+    "intent": "grievance_query",
+    "question": "Who heads the student grievance redressal committee at NIET?"
+  },
+  {
+    "intent": "grievance_query",
+    "question": "How does the grievance redressal process work at NIET?"
+  }
 ]

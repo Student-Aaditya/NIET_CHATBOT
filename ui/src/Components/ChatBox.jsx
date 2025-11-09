@@ -7,7 +7,6 @@ export default function ChatBox() {
   const [loading, setLoading] = useState(false);
   const [history, setHistory] = useState([]);
 
-  // ✅ Send message to Flask backend
   async function send(userMessage) {
     const messageToSend = userMessage || msg;
     if (!messageToSend.trim()) return;
@@ -21,7 +20,6 @@ export default function ChatBox() {
       const data = res.data;
       setLoading(false);
 
-      // If backend returns clarification options (like "fees?")
       if (data.options && Array.isArray(data.options)) {
         setHistory((h) => [
           ...h,
@@ -35,7 +33,6 @@ export default function ChatBox() {
         return;
       }
 
-      // Standard answer handling
       let answerLines = [];
       if (!data.answer) {
         answerLines = ["🤖 No response from server."];
@@ -44,7 +41,7 @@ export default function ChatBox() {
       } else if (Array.isArray(data.answer)) {
         answerLines = data.answer.map((line, i) => `${i + 1}. ${line}`);
       } else {
-        answerLines = ["🤖 Unable to parse server response."];
+        answerLines = ["Unable to parse server response."];
       }
 
       setHistory((h) => [
@@ -64,7 +61,6 @@ export default function ChatBox() {
     }
   }
 
-  // ✅ Quick backend test
   async function testBackend() {
     setLoading(true);
     try {
@@ -72,185 +68,226 @@ export default function ChatBox() {
       setLoading(false);
       setHistory((h) => [
         ...h,
-        { from: "bot", text: `✅ Backend says: ${res.data.message}` },
+        { from: "bot", text: `Backend says: ${res.data.message}` },
       ]);
     } catch {
       setLoading(false);
       setHistory((h) => [
         ...h,
-        { from: "bot", text: "⚠️ Unable to reach backend!" },
+        { from: "bot", text: "Unable to reach backend!" },
       ]);
     }
   }
 
-  // ✅ Clickable option (for clarification)
-  const handleOptionClick = (option) => {
-    send(option);
-  };
+  const handleOptionClick = (option) => send(option);
 
   return (
     <div className="chatgpt-root">
       <style>{`
         :root {
-          --chatgpt-green: #74aa9c;
-          --chatgpt-purple: #ab68ff;
-          --chatgpt-bg: #f7f7fa;
-          --chatgpt-white: #fff;
-          --chatgpt-text: #343541;
-          --user-bubble: var(--chatgpt-purple);
-          --bot-bubble: var(--chatgpt-green);
-          --bubble-bg: var(--chatgpt-white);
+          --niet-red: #e11d48;
+          --niet-dark: #0f172a;
+          --niet-light: #f8fafc;
+          --niet-gradient: linear-gradient(90deg, #0f172a, #1e293b, #e11d48);
         }
+
         * { box-sizing: border-box; }
         .chatgpt-root {
           font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
-          min-height: 100vh;
-          color: var(--chatgpt-text);
+          color: #1e293b;
         }
+
+        /* Floating Chat Buttons */
         .chat-toggle {
           position: fixed;
           right: 24px;
           bottom: 24px;
           z-index: 99;
+          display: flex;
+          gap: 8px;
         }
+
+        .btn-primary {
+          background: linear-gradient(to right, #e11d48, #be123c);
+          color: white;
+          border: none;
+          border-radius: 9999px;
+          padding: 12px 20px;
+          font-size: 15px;
+          font-weight: 600;
+          cursor: pointer;
+          box-shadow: 0 4px 10px rgba(225, 29, 72, 0.3);
+          transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+          transform: scale(1.05);
+          background: linear-gradient(to right, #be123c, #e11d48);
+        }
+
+        /* Chat window styling */
         .chat-window {
           position: fixed;
           right: 24px;
           bottom: 90px;
-          width: 440px;
-          background: var(--chatgpt-white);
+          width: 420px;
+          background: #fff;
           border-radius: 18px;
-          box-shadow: 0 8px 32px rgba(52,53,65,0.15);
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
           overflow: hidden;
           display: flex;
           flex-direction: column;
-          border: 1px solid #e1e1e1;
+          border: 1px solid #e5e7eb;
         }
+
         .chat-header {
-          padding: 14px 18px;
-          background: linear-gradient(90deg, #74aa9c, #ab68ff);
+          padding: 16px 20px;
+          background: var(--niet-gradient);
           color: #fff;
           display: flex;
           align-items: center;
-          gap: 14px;
+          justify-content: space-between;
         }
+
+        .chat-header-left {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+
         .avatar {
           width: 40px;
-          height: 36px;
+          height: 40px;
           border-radius: 12px;
-          background: var(--chatgpt-white);
-          color: var(--chatgpt-green);
+          background: white;
+          color: var(--niet-red);
           display: flex;
           align-items: center;
           justify-content: center;
-          font-size: 18px;
           font-weight: 900;
+          font-size: 18px;
         }
+
         .chat-title-box {
           display: flex;
           flex-direction: column;
-          line-height: 1.1;
+          line-height: 1.2;
         }
+
         .chat-title {
-          font-weight: 800;
+          font-weight: 700;
           font-size: 16px;
         }
+
         .chat-desc {
           font-size: 12px;
-          color: #eaffee;
+          color: #e2e8f0;
         }
+
+        /* Chat body */
         .chat-body {
+          background: url('/college-bg.jpg') no-repeat center center/cover;
+          backdrop-filter: blur(8px);
           padding: 16px;
           height: 400px;
-          overflow: auto;
+          overflow-y: auto;
           display: flex;
           flex-direction: column;
           gap: 12px;
-          background: var(--chatgpt-bg);
         }
+
         .bubble {
           max-width: 80%;
-          padding: 12px 18px;
-          border-radius: 15px;
+          padding: 12px 16px;
+          border-radius: 16px;
           font-size: 15px;
           white-space: pre-line;
-          margin-bottom: 3px;
-          box-shadow: 0 2px 7px rgba(52,53,65,0.08);
+          line-height: 1.4;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+          animation: fadeInUp 0.3s ease;
         }
+
         .bubble.user {
           align-self: flex-end;
-          background: var(--user-bubble);
+          background: linear-gradient(to right, #e11d48, #be123c);
           color: #fff;
-          border-bottom-right-radius: 6px;
+          border-bottom-right-radius: 4px;
         }
+
         .bubble.bot {
           align-self: flex-start;
-          background: var(--bot-bubble);
-          color: #fff;
-          border-bottom-left-radius: 6px;
+          background: #fff;
+          color: #1e293b;
+          border: 1px solid #e2e8f0;
+          border-bottom-left-radius: 4px;
         }
+
+        @keyframes fadeInUp {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Input area */
         .chat-composer {
           display: flex;
-          gap: 8px;
+          gap: 10px;
           padding: 14px;
-          border-top: 1px solid #eee;
-          background: var(--chatgpt-white);
+          border-top: 1px solid #e5e7eb;
+          background: #fff;
         }
+
         .chat-composer input {
           flex: 1;
           padding: 10px 14px;
-          border-radius: 10px;
-          border: 1px solid #d4d4d4;
+          border-radius: 9999px;
+          border: 1px solid #d1d5db;
           font-size: 15px;
+          background: #f9fafb;
         }
-        .btn-primary {
-          background: linear-gradient(90deg, var(--chatgpt-green) 80%, var(--chatgpt-purple) 120%);
-          color: #fff;
-          border: none;
-          border-radius: 10px;
-          padding: 0 20px;
-          font-size: 15px;
-          font-weight: 600;
-          cursor: pointer;
-          transition: background 0.2s;
-          height: 40px;
+
+        .chat-composer input:focus {
+          outline: none;
+          border-color: var(--niet-red);
+          box-shadow: 0 0 0 2px rgba(225, 29, 72, 0.3);
         }
-        .btn-primary:active {
-          opacity: 0.87;
+
+        .loading {
+          align-self: flex-start;
+          color: #334155;
+          font-style: italic;
         }
+
         .options {
           display: flex;
           flex-wrap: wrap;
-          gap: 8px;
-          margin-top: 8px;
+          gap: 6px;
+          margin-top: 6px;
         }
+
         .option-btn {
-          background: #fff;
-          border: 1px solid #ddd;
-          border-radius: 8px;
+          background: white;
+          border: 1px solid #e2e8f0;
+          border-radius: 9999px;
           padding: 6px 12px;
           font-size: 13px;
           cursor: pointer;
-          color: #333;
+          transition: all 0.2s;
         }
+
         .option-btn:hover {
-          background: #74aa9c;
+          background: var(--niet-red);
           color: white;
+          border-color: var(--niet-red);
         }
       `}</style>
 
-      {/* Floating Chat Toggle */}
+      {/* Floating Buttons */}
       <div className="chat-toggle">
         <button className="btn-primary" onClick={() => setOpenChat((s) => !s)}>
-          {openChat ? "Close Chat" : "Open Chat"}
+          {openChat ? "Close Chat" : "Chat with NIET"}
         </button>
         {openChat && (
-          <button
-            className="btn-primary"
-            style={{ marginLeft: "8px" }}
-            onClick={testBackend}
-            disabled={loading}
-          >
+          <button className="btn-primary" onClick={testBackend} disabled={loading}>
             Test Backend
           </button>
         )}
@@ -258,12 +295,14 @@ export default function ChatBox() {
 
       {/* Chat Window */}
       {openChat && (
-        <div className="chat-window" role="dialog" aria-label="ChatGPT-Inspired Chat">
+        <div className="chat-window">
           <div className="chat-header">
-            <div className="avatar">N</div>
-            <div className="chat-title-box">
-              <span className="chat-title">NIET Buddy</span>
-              <span className="chat-desc">Placement & Admission Help</span>
+            <div className="chat-header-left">
+              <div className="avatar">N</div>
+              <div className="chat-title-box">
+                <span className="chat-title">NIET Assistant</span>
+                <span className="chat-desc">Admissions • Placement • Info</span>
+              </div>
             </div>
           </div>
 
@@ -291,13 +330,13 @@ export default function ChatBox() {
                   </div>
                 )}
                 {m.intent && (
-                  <div style={{ fontSize: "12px", marginTop: "6px", color: "#e0f7f1" }}>
+                  <div style={{ fontSize: "12px", marginTop: "6px", color: "#64748b" }}>
                     Intent: {m.intent}
                   </div>
                 )}
               </div>
             ))}
-            {loading && <div className="bubble bot">⏳ Loading...</div>}
+            {loading && <div className="bubble bot loading">⏳ Thinking...</div>}
           </div>
 
           <div className="chat-composer">

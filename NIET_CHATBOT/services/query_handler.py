@@ -48,7 +48,6 @@ def fetch_data(intent, user_input):
                 f"(includes {', '.join(hostel['includes'])})."
             )
 
-        # ---- Clarify ----
         else:
             return "Could you please specify which fees you want details about? (Academic / Bus / Hostel)"
 
@@ -94,7 +93,6 @@ def fetch_data(intent, user_input):
             "Institute verifies documents before forwarding them to authorities."
         )
 
-
     # === STUDENT WELFARE ===
     elif intent == "student_welfare_query":
         welfare = data["student_welfare"]
@@ -118,13 +116,13 @@ def fetch_data(intent, user_input):
         )
 
 
-    # === PLACEMENT / CMC ===
+    # === PLACEMENT / CMC 
     elif intent == "placement_query":
         placement = data["career_management_cell"]["rules"]
         return "Placement & CMC Rules:*\n- " + "\n- ".join(placement)
 
 
-    # === CLUBS & ACTIVITIES ===
+    # === CLUBS & ACTIVITIES 
     elif intent == "club_query":
         clubs = data["clubs_and_activities"]
         return (
@@ -136,13 +134,13 @@ def fetch_data(intent, user_input):
         )
 
 
-    # === HOSTEL RULES ===
+    # === HOSTEL RULES 
     elif intent == "hostel_query":
         hostel_rules = data["rules_regulations"]["hostel"]
         return "Hostel Rules:- " + "\n- ".join(hostel_rules)
 
 
-    # === CONTACT INFO ===
+    # === CONTACT INFO 
     elif intent == "contact_query":
         contacts = data["important_contacts"]
         return (
@@ -151,13 +149,13 @@ def fetch_data(intent, user_input):
         )
 
 
-    # === RULES & CONDUCT ===
+    # === RULES & CONDUCT 
     elif intent in ["rules_query", "code_of_conduct_query"]:
         rules = data["rules_regulations"]["campus"]
         return "Campus Discipline Rules:- " + "\n- ".join(rules)
 
 
-    # === FALLBACK ===
+    # === FALLBACK 
     else:
         return (
             "Sorry, I couldn’t find any information related to that question. "
