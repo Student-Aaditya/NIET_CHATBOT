@@ -24,7 +24,7 @@ function App() {
       <div className="absolute w-80 h-80 bg-indigo-500/20 rounded-full blur-3xl bottom-16 right-1/4 animate-pulse delay-150"></div>
 
       <div className="relative z-10 text-center px-6 py-8 backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl shadow-2xl max-w-4xl">
-        <h1 className="text-5xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-pink-400 via-red-500 to-yellow-300 drop-shadow-lg mb-3">
+        <h1 className="text-5xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-linear-to-r from-pink-400 via-red-500 to-yellow-300 drop-shadow-lg mb-3">
           Noida Institute of Engineering & Technology
         </h1>
         <p className="text-lg md:text-xl text-gray-200 font-medium tracking-wide">
