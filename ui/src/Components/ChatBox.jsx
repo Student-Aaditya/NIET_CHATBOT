@@ -16,7 +16,7 @@ export default function ChatBox() {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:5023/chat", { message: messageToSend });
+      const res = await axios.post("https://niet-chatbot-back.onrender.com/chat", { message: messageToSend });
       const data = res.data;
       setLoading(false);
 
@@ -64,7 +64,7 @@ export default function ChatBox() {
   async function testBackend() {
     setLoading(true);
     try {
-      const res = await axios.get("http://localhost:5023/");
+      const res = await axios.get("https://niet-chatbot-back.onrender.com/");
       setLoading(false);
       setHistory((h) => [
         ...h,
