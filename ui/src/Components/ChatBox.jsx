@@ -89,7 +89,6 @@ export default function ChatBox() {
         :root {
           --niet-red: #e11d48;
           --niet-dark: #0f172a;
-          --niet-light: #f8fafc;
           --niet-gradient: linear-gradient(90deg, #0f172a, #1e293b, #e11d48);
         }
 
@@ -107,8 +106,8 @@ export default function ChatBox() {
           z-index: 99;
           display: flex;
           flex-direction: row;
+          gap: 10px;
           flex-wrap: wrap;
-          gap: 8px;
         }
 
         .btn-primary {
@@ -122,11 +121,17 @@ export default function ChatBox() {
           cursor: pointer;
           box-shadow: 0 4px 10px rgba(225, 29, 72, 0.3);
           transition: all 0.3s ease;
+          min-width: 130px;
         }
 
         .btn-primary:hover {
           transform: scale(1.05);
           background: linear-gradient(to right, #be123c, #e11d48);
+        }
+
+        .btn-primary:disabled {
+          opacity: 0.6;
+          cursor: not-allowed;
         }
 
         /* Chat window styling */
@@ -143,6 +148,7 @@ export default function ChatBox() {
           flex-direction: column;
           border: 1px solid #e5e7eb;
           z-index: 100;
+          transition: all 0.3s ease;
         }
 
         .chat-header {
@@ -189,7 +195,6 @@ export default function ChatBox() {
           color: #e2e8f0;
         }
 
-        /* Chat body */
         .chat-body {
           background: url('/college-bg.jpg') no-repeat center center/cover;
           backdrop-filter: blur(8px);
@@ -206,7 +211,6 @@ export default function ChatBox() {
           padding: 12px 16px;
           border-radius: 16px;
           font-size: 15px;
-          white-space: pre-line;
           line-height: 1.4;
           box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
           animation: fadeInUp 0.3s ease;
@@ -232,7 +236,6 @@ export default function ChatBox() {
           to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Input area */
         .chat-composer {
           display: flex;
           gap: 10px;
@@ -254,12 +257,6 @@ export default function ChatBox() {
           outline: none;
           border-color: var(--niet-red);
           box-shadow: 0 0 0 2px rgba(225, 29, 72, 0.3);
-        }
-
-        .loading {
-          align-self: flex-start;
-          color: #334155;
-          font-style: italic;
         }
 
         .options {
@@ -285,9 +282,8 @@ export default function ChatBox() {
           border-color: var(--niet-red);
         }
 
-        /* ✅ Responsive Breakpoints */
+        /* ✅ Responsive Design */
 
-        /* Tablets */
         @media (max-width: 768px) {
           .chat-window {
             right: 16px;
@@ -299,6 +295,7 @@ export default function ChatBox() {
           .btn-primary {
             font-size: 13px;
             padding: 8px 14px;
+            min-width: 110px;
           }
 
           .chat-body {
@@ -306,7 +303,6 @@ export default function ChatBox() {
           }
         }
 
-        /* Mobile Phones */
         @media (max-width: 480px) {
           .chat-window {
             width: 100%;
@@ -315,12 +311,10 @@ export default function ChatBox() {
             bottom: 0;
             border-radius: 0;
             height: 100vh;
-            max-height: none;
           }
 
           .chat-header {
             padding: 14px;
-            font-size: 14px;
           }
 
           .chat-body {
@@ -333,12 +327,14 @@ export default function ChatBox() {
             bottom: 12px;
             flex-direction: column;
             align-items: flex-end;
+            gap: 8px;
           }
 
           .btn-primary {
-            width: 120px;
-            font-size: 13px;
-            padding: 10px 12px;
+            width: 100%;
+            font-size: 14px;
+            padding: 12px;
+            border-radius: 10px;
           }
 
           .chat-composer {
@@ -348,11 +344,6 @@ export default function ChatBox() {
           }
 
           .chat-composer input {
-            width: 100%;
-            border-radius: 8px;
-          }
-
-          .chat-composer button {
             width: 100%;
             border-radius: 8px;
           }
@@ -367,9 +358,13 @@ export default function ChatBox() {
 
       {/* Floating Buttons */}
       <div className="chat-toggle">
-        <button className="btn-primary" onClick={() => setOpenChat((s) => !s)}>
+        <button
+          className="btn-primary"
+          onClick={() => setOpenChat((s) => !s)}
+        >
           {openChat ? "Close Chat" : "Chat with NIET"}
         </button>
+
         {openChat && (
           <button
             className="btn-primary"
@@ -415,17 +410,6 @@ export default function ChatBox() {
                         {opt}
                       </button>
                     ))}
-                  </div>
-                )}
-                {m.intent && (
-                  <div
-                    style={{
-                      fontSize: "12px",
-                      marginTop: "6px",
-                      color: "#64748b",
-                    }}
-                  >
-                    Intent: {m.intent}
                   </div>
                 )}
               </div>
