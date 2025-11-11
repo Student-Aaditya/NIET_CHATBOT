@@ -16,7 +16,9 @@ export default function ChatBox() {
     setLoading(true);
 
     try {
-      const res = await axios.post("https://niet-chatbot-back.onrender.com/chat", { message: messageToSend });
+      const res = await axios.post("https://niet-chatbot-back.onrender.com/chat", {
+        message: messageToSend,
+      });
       const data = res.data;
       setLoading(false);
 
@@ -104,6 +106,8 @@ export default function ChatBox() {
           bottom: 24px;
           z-index: 99;
           display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
           gap: 8px;
         }
 
@@ -112,8 +116,8 @@ export default function ChatBox() {
           color: white;
           border: none;
           border-radius: 9999px;
-          padding: 12px 20px;
-          font-size: 15px;
+          padding: 10px 18px;
+          font-size: 14px;
           font-weight: 600;
           cursor: pointer;
           box-shadow: 0 4px 10px rgba(225, 29, 72, 0.3);
@@ -138,6 +142,7 @@ export default function ChatBox() {
           display: flex;
           flex-direction: column;
           border: 1px solid #e5e7eb;
+          z-index: 100;
         }
 
         .chat-header {
@@ -279,6 +284,85 @@ export default function ChatBox() {
           color: white;
           border-color: var(--niet-red);
         }
+
+        /* ✅ Responsive Breakpoints */
+
+        /* Tablets */
+        @media (max-width: 768px) {
+          .chat-window {
+            right: 16px;
+            bottom: 80px;
+            width: 90%;
+            max-width: 400px;
+          }
+
+          .btn-primary {
+            font-size: 13px;
+            padding: 8px 14px;
+          }
+
+          .chat-body {
+            height: 350px;
+          }
+        }
+
+        /* Mobile Phones */
+        @media (max-width: 480px) {
+          .chat-window {
+            width: 100%;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            border-radius: 0;
+            height: 100vh;
+            max-height: none;
+          }
+
+          .chat-header {
+            padding: 14px;
+            font-size: 14px;
+          }
+
+          .chat-body {
+            height: calc(100vh - 140px);
+            padding: 12px;
+          }
+
+          .chat-toggle {
+            right: 12px;
+            bottom: 12px;
+            flex-direction: column;
+            align-items: flex-end;
+          }
+
+          .btn-primary {
+            width: 120px;
+            font-size: 13px;
+            padding: 10px 12px;
+          }
+
+          .chat-composer {
+            flex-direction: column;
+            gap: 8px;
+            padding: 10px;
+          }
+
+          .chat-composer input {
+            width: 100%;
+            border-radius: 8px;
+          }
+
+          .chat-composer button {
+            width: 100%;
+            border-radius: 8px;
+          }
+
+          .bubble {
+            max-width: 90%;
+            font-size: 14px;
+            padding: 10px 12px;
+          }
+        }
       `}</style>
 
       {/* Floating Buttons */}
@@ -287,7 +371,11 @@ export default function ChatBox() {
           {openChat ? "Close Chat" : "Chat with NIET"}
         </button>
         {openChat && (
-          <button className="btn-primary" onClick={testBackend} disabled={loading}>
+          <button
+            className="btn-primary"
+            onClick={testBackend}
+            disabled={loading}
+          >
             Test Backend
           </button>
         )}
@@ -330,7 +418,13 @@ export default function ChatBox() {
                   </div>
                 )}
                 {m.intent && (
-                  <div style={{ fontSize: "12px", marginTop: "6px", color: "#64748b" }}>
+                  <div
+                    style={{
+                      fontSize: "12px",
+                      marginTop: "6px",
+                      color: "#64748b",
+                    }}
+                  >
                     Intent: {m.intent}
                   </div>
                 )}
@@ -347,7 +441,11 @@ export default function ChatBox() {
               onKeyDown={(e) => e.key === "Enter" && send()}
               disabled={loading}
             />
-            <button className="btn-primary" onClick={() => send()} disabled={loading}>
+            <button
+              className="btn-primary"
+              onClick={() => send()}
+              disabled={loading}
+            >
               Send
             </button>
           </div>
